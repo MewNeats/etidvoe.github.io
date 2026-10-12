@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===== НАЗВАНИЕ ВКЛАДКИ В БРАУЗЕРЕ ===== -->
+<title>Эти двое — живая музыка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Все стили (цвета, шрифты) — в файле style.css -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========================== МЕНЮ ========================== -->
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Эти <span>двое</span></a>
+    <ul>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#prices">Цены</a></li>
+      <li><a href="#songs">Песни</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======================= ГЛАВНЫЙ ЭКРАН ======================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1><span class="label">Эти двое</span></h1>
+    <!-- ТЕКСТ НА ГЛАВНОМ ЭКРАНЕ — каждую строку можно поменять -->
+    <div class="lines">
+      <span class="label">Милена &amp; Давид — живая музыка</span>
+      <span class="label">Заказ песни — 1000 ₽</span>
+      <!-- НОМЕР ДЛЯ ПОДДЕРЖКИ на главном экране -->
+      <span class="label">Поддержать нас: +7 951-898-06-98 — Т-Банк</span>
+    </div>
+    <div class="btns">
+      <a href="#songs" class="btn primary">Выбрать песню</a>
+      <a href="#contacts" class="btn">Связаться</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========================== О НАС ========================== -->
+<section id="about">
+  <div class="wrap">
+    <h2 class="label">Кто мы</h2><br>
+    <!-- ОПИСАНИЕ ДУЭТА -->
+    <p class="panel about-text">Мы — дуэт «Эти двое». Поём любимые песни: от русского рока до мировых хитов. Пишите нам в соцсетях — ответим на вопросы и договоримся о выступлении.</p>
+
+    <div class="duo">
+      <!-- ---------- КАРТОЧКА МИЛЕНЫ ---------- -->
+      <div class="person m">
+        <!-- ФОТО: замените этот div на <img class="photo" src="milena.jpg" alt="Милена"> -->
+        <div class="photo">Фото Милены</div>
+        <h3>Милена</h3>
+        <div class="role">Вокал</div>
+        <!-- ССЫЛКИ МИЛЕНЫ: замените "#" на свои ссылки -->
+        <div class="socials">
+          <a href="#" target="_blank">Telegram</a>     <!-- например: https://t.me/username -->
+          <a href="#" target="_blank">ВКонтакте</a>    <!-- например: https://vk.com/username -->
+          <a href="#" target="_blank">Instagram</a>    <!-- например: https://instagram.com/username -->
+          <a href="#" target="_blank">Написать в личку</a> <!-- например: https://t.me/username или https://wa.me/79990000000 -->
+        </div>
+      </div>
+
+      <!-- ---------- КАРТОЧКА ДАВИДА ---------- -->
+      <div class="person d">
+        <!-- ФОТО: замените этот div на <img class="photo" src="david.jpg" alt="Давид"> -->
+        <div class="photo">Фото Давида</div>
+        <h3>Давид</h3>
+        <div class="role">Вокал, гитара</div>
+        <!-- ССЫЛКИ ДАВИДА: замените "#" на свои ссылки -->
+        <div class="socials">
+          <a href="#" target="_blank">Telegram</a>
+          <a href="#" target="_blank">ВКонтакте</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Написать в личку</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== ЦЕНЫ =========================== -->
+<section id="prices">
+  <div class="wrap">
+    <h2 class="label">Цены</h2>
+    <!-- КАРТОЧКИ ЦЕН: чтобы добавить новую — скопируйте блок <div class="price-card">...</div> -->
+    <div class="price-grid">
+      <div class="price-card main">
+        <div class="what">Заказ одной песни</div>
+        <div class="sum">1000 ₽</div>
+        <div class="note">Любая песня из списка ниже</div>
+      </div>
+      <!-- ПОДДЕРЖАТЬ НАС: номер и банк можно поменять -->
+      <div class="price-card">
+        <div class="what">Поддержать нас</div>
+        <div class="phone">+7 951 8980698</div>
+        <div class="note">Перевод по номеру — Т-Банк</div>
+      </div>
+      <!-- ПРИМЕР ДОПОЛНИТЕЛЬНОЙ ЦЕНЫ (раскомментируйте, если нужно):
+      <div class="price-card">
+        <div class="what">Песня вне списка</div>
+        <div class="sum">2000 ₽</div>
+        <div class="note">Если успеем выучить</div>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ======================== СПИСОК ПЕСЕН ======================== -->
+<section id="songs">
+  <div class="wrap">
+    <h2 class="label">Что мы поём</h2><br>
+    <div class="sub label">Выбирайте песню — сортировка и поиск ниже</div>
+
+    <div class="controls">
+      <div class="tabs" id="tabs">
+        <button class="active" data-who="all">Все</button>
+        <button data-who="m">Милена</button>
+        <button data-who="d">Давид</button>
+      </div>
+      <input class="search" id="search" type="search" placeholder="Поиск по песне или исполнителю…">
+      <select class="sort" id="sort">
+        <option value="artist">По исполнителю (А→Я)</option>
+        <option value="artist-desc">По исполнителю (Я→А)</option>
+        <option value="title">По названию (А→Я)</option>
+        <option value="title-desc">По названию (Я→А)</option>
+      </select>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="songs" id="list"></div>
+  </div>
+</section>
+
+<!-- ========================= КОНТАКТЫ ========================= -->
+<section id="contacts" class="cta">
+  <div class="wrap">
+    <h2 class="label">Хотите песню?</h2><br>
+    <div class="sub label">Подойдите к нам в баре или напишите в личку</div>
+    <!-- КНОПКИ СВЯЗИ: замените "#" на ссылки на личку -->
+    <div class="btns">
+      <a href="#" class="btn primary" target="_blank">Написать Милене</a>
+      <a href="#" class="btn" target="_blank">Написать Давиду</a>
+      <!-- ОБЩИЙ TELEGRAM ДУЭТА -->
+      <a href="https://t.me/etidvoeee" class="btn" target="_blank">Telegram @etidvoeee</a>
+    </div>
+  </div>
+</section>
+
+<footer>© Эти двое</footer>
+
+<script>
+/* =================================================================
+   СПИСОК ПЕСЕН — РЕДАКТИРУЙТЕ ЗДЕСЬ
+   Формат строки:  ["Исполнитель", "Название песни"],
+   Чтобы добавить песню — допишите строку в нужный список.
+   Чтобы удалить — сотрите строку.
+   Если песня есть у обоих — она автоматически покажется с двумя метками.
+   ================================================================= */
+
+// ---------- ПЕСНИ МИЛЕНЫ ----------
+const MILENA_SONGS = [
+  ["Агата Кристи", "Как на войне"],
+  ["Аффинаж", "Солнце"],
+  ["Амега", "Лететь"],
+  ["Ария", "Я свободен"],
+  ["Би-2", "Варвара"],
+  ["Браво", "Этот город"],
+  ["Глюкоза", "Снег идёт"],
+  ["Город 312", "Останусь"],
+  ["Город 312", "Фонари"],
+  ["Гречка", "Люби меня люби"],
+  ["Елена Ваенга", "Курю"],
+  ["Женя Трофимов", "Самолёты"],
+  ["Жуки", "Батарейка"],
+  ["Земфира", "Бесконечность"],
+  ["Земфира", "Искала"],
+  ["Земфира", "Хочешь"],
+  ["Звери", "Дожди-пистолеты"],
+  ["Король и Шут", "Ведьма и осёл"],
+  ["Король и Шут", "Воспоминания о былой любви"],
+  ["Король и Шут", "Дурак и молния"],
+  ["Король и Шут", "Кукла колдуна"],
+  ["Король и Шут", "Лесник"],
+  ["Король и Шут", "Прыгну со скалы"],
+  ["МакSим", "Знаешь ли ты"],
+  ["МакSим", "Отпускаю"],
+  ["Мельница", "Дороги"],
+  ["Наутилус Помпилиус", "Дыхание"],
+  ["Наутилус Помпилиус", "Крылья"],
+  ["Нервы", "Слишком влюблён"],
+  ["Николай Носков", "Это здорово"],
+  ["Ночные Снайперы", "31 весна"],
+  ["Ночные Снайперы", "Катастрофически"],
+  ["Порнофильмы", "Прости. Прощай. Привет."],
+  ["Порнофильмы", "Я так соскучился"],
+  ["Сплин", "Выхода нет"],
+  ["Форум", "Белая ночь"],
+  ["Fleur", "Формалин"],
+  ["Юта", "Жили-были"],
+  ["5’nizza", "Нева"],
+  ["5’nizza", "Солдат"],
+  ["IOWA", "Мы"],
+  ["IOWA", "Простая песня"],
+  ["Queen", "The Show Must Go On"],
+  ["Radiohead", "Creep"],
+  ["Rihanna", "Stay"],
+  ["The Cranberries", "Zombie"],
+  ["Vanessa Paradis", "La Seine"],
+];
+
+// ---------- ПЕСНИ ДАВИДА ----------
+const DAVID_SONGS = [
+  ["Александр Розенбаум", "Утки"],
+  ["Антон Токарев", "Седьмой лепесток"],
+  ["Баста", "Сансара"],
+  ["Бонд с кнопкой", "Кухни"],
+  ["Бременские музыканты", "Песня друзей"],
+  ["Бременские музыканты", "Песня трубадура"],
+  ["Бумбокс", "Вахтерам"],
+  ["Валентин Стрыкало", "Дешёвые драмы"],
+  ["Валентин Стрыкало", "Кладбище самолётов"],
+  ["Валентин Стрыкало", "Космос нас ждёт"],
+  ["Валентин Стрыкало", "Наше лето"],
+  ["Валентин Стрыкало", "Улица Сталеваров"],
+  ["Градусы", "Голая"],
+  ["Дайте танк (!)", "Лучшее"],
+  ["Дайте танк (!)", "Маленький"],
+  ["Дайте танк (!)", "Спам"],
+  ["Земляне", "Трава у дома"],
+  ["Звери", "Всё, что тебя касается"],
+  ["Звери", "Говори"],
+  ["Звери", "Районы-кварталы"],
+  ["Звери", "Я с тобой"],
+  ["Иван Дорн", "Северное сияние"],
+  ["Кино", "Группа крови"],
+  ["Кино", "Звезда по имени Солнце"],
+  ["Кино", "Кукушка"],
+  ["Кино", "Спокойная ночь"],
+  ["Клара Румянова", "Облака"],
+  ["Ляпис Трубецкой", "Капитал"],
+  ["Муслим Магомаев", "Синяя вечность"],
+  ["Несчастный случай", "Генералы песчаных карьеров"],
+  ["Нойз МС", "Грабли"],
+  ["Нойз МС", "Вселенная бесконечна"],
+  ["Пицца", "Лифт"],
+  ["Пицца", "Оружие"],
+  ["Приключения капитана Врунгеля", "Мы бандито"],
+  ["Сектор Газа", "Бомж"],
+  ["Синяя птица", "Там, где клён шумит"],
+  ["Сплин", "Выхода нет"],
+  ["Uma2rman", "Прасковья"],
+  ["Uma2rman", "Проститься"],
+  ["5’nizza", "Ямайка"],
+  ["BadaBoo", "Улетаю"],
+  ["David Bowie (Nirvana)", "The Man Who Sold the World"],
+  ["Nancy Sinatra", "Bang Bang"],
+  ["Quest Pistols", "Ты так красива"],
+];
+
+/* =================================================================
+   ДАЛЬШЕ — КОД САЙТА. ТРОГАТЬ НЕ НУЖНО.
+   ================================================================= */
+const songs = new Map();
+function add(list, who){
+  list.forEach(([artist, title]) => {
+    const key = (artist + "|" + title).toLowerCase();
+    if (!songs.has(key)) songs.set(key, {artist, title, who: new Set()});
+    songs.get(key).who.add(who);
+  });
+}
+add(MILENA_SONGS, "m");
+add(DAVID_SONGS, "d");
+const ALL = [...songs.values()];
+
+let state = {who: "all", q: "", sort: "artist"};
+const coll = new Intl.Collator("ru", {sensitivity: "base", numeric: true});
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function render(){
+  const q = state.q.trim().toLowerCase();
+  let rows = ALL.filter(s =>
+    (state.who === "all" || s.who.has(state.who)) &&
+    (!q || (s.artist + " " + s.title).toLowerCase().includes(q))
+  );
+  const [field, dir] = state.sort.split("-");
+  const other = field === "artist" ? "title" : "artist";
+  rows.sort((a, b) => (coll.compare(a[field], b[field]) || coll.compare(a[other], b[other])) * (dir ? -1 : 1));
+
+  document.getElementById("count").textContent = "Песен: " + rows.length;
+  document.getElementById("list").innerHTML = rows.length
+    ? rows.map((s, i) => `
+      <div class="song">
+        <div class="num">${i + 1}</div>
+        <div class="info"><div class="title">${esc(s.title)}</div><div class="artist">${esc(s.artist)}</div></div>
+        <div class="who">${s.who.has("m") ? '<span class="dot m">Милена</span>' : ""}${s.who.has("d") ? '<span class="dot d">Давид</span>' : ""}</div>
+      </div>`).join("")
+    : '<div class="empty">Ничего не нашлось 🙁</div>';
+}
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("active", x === b));
+  state.who = b.dataset.who; render();
+});
+document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; render(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+render();
+</script>
+</body>
+</html>
