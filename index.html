@@ -3,165 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ===== НАЗВАНИЕ ВКЛАДКИ В БРАУЗЕРЕ ===== -->
-<title>Эти двое — живая музыка</title>
+<!-- НАЗВАНИЕ ВКЛАДКИ -->
+<title>Эти двое — заказ песен</title>
+<meta name="theme-color" content="#5c0f17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-
-<!-- Все стили (цвета, шрифты) — в файле style.css -->
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<!-- Цвета и размеры — в файле style.css -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ========================== МЕНЮ ========================== -->
-<nav>
-  <div class="wrap">
-    <a href="#top" class="logo">Эти <span>двое</span></a>
-    <ul>
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#prices">Цены</a></li>
-      <li><a href="#songs">Песни</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ======================= ГЛАВНЫЙ ЭКРАН ======================= -->
-<header class="hero" id="top">
-  <div class="wrap">
-    <h1><span class="label">Эти двое</span></h1>
-    <!-- ТЕКСТ НА ГЛАВНОМ ЭКРАНЕ — каждую строку можно поменять -->
-    <div class="lines">
-      <span class="label">Милена &amp; Давид — живая музыка</span>
-      <span class="label">Заказ песни — 1000 ₽</span>
-      <!-- НОМЕР ДЛЯ ПОДДЕРЖКИ на главном экране -->
-      <span class="label">Поддержать нас: +7 951-898-06-98 — Т-Банк</span>
-    </div>
-    <div class="btns">
-      <a href="#songs" class="btn primary">Выбрать песню</a>
-      <a href="#contacts" class="btn">Связаться</a>
-    </div>
-  </div>
+<!-- ======================= ШАПКА ======================= -->
+<header class="top">
+  <h1><span class="label">Эти<br>двое</span></h1>
+  <div class="sub">Милена и Давид. Живая музыка</div>
 </header>
 
-<!-- ========================== О НАС ========================== -->
-<section id="about">
-  <div class="wrap">
-    <h2 class="label">Кто мы</h2><br>
-    <!-- ОПИСАНИЕ ДУЭТА -->
-    <p class="panel about-text">Мы — дуэт «Эти двое». Поём любимые песни: от русского рока до мировых хитов. Пишите нам в соцсетях — ответим на вопросы и договоримся о выступлении.</p>
-
-    <div class="duo">
-      <!-- ---------- КАРТОЧКА МИЛЕНЫ ---------- -->
-      <div class="person m">
-        <!-- ФОТО: замените этот div на <img class="photo" src="milena.jpg" alt="Милена"> -->
-        <div class="photo">Фото Милены</div>
-        <h3>Милена</h3>
-        <div class="role">Вокал</div>
-        <!-- ССЫЛКИ МИЛЕНЫ: замените "#" на свои ссылки -->
-        <div class="socials">
-          <a href="#" target="_blank">Telegram</a>     <!-- например: https://t.me/username -->
-          <a href="#" target="_blank">ВКонтакте</a>    <!-- например: https://vk.com/username -->
-          <a href="#" target="_blank">Instagram</a>    <!-- например: https://instagram.com/username -->
-          <a href="#" target="_blank">Написать в личку</a> <!-- например: https://t.me/username или https://wa.me/79990000000 -->
-        </div>
-      </div>
-
-      <!-- ---------- КАРТОЧКА ДАВИДА ---------- -->
-      <div class="person d">
-        <!-- ФОТО: замените этот div на <img class="photo" src="david.jpg" alt="Давид"> -->
-        <div class="photo">Фото Давида</div>
-        <h3>Давид</h3>
-        <div class="role">Вокал, гитара</div>
-        <!-- ССЫЛКИ ДАВИДА: замените "#" на свои ссылки -->
-        <div class="socials">
-          <a href="#" target="_blank">Telegram</a>
-          <a href="#" target="_blank">ВКонтакте</a>
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">Написать в личку</a>
-        </div>
-      </div>
+<!-- =================== ЦЕНА И ОПЛАТА =================== -->
+<section class="wrap">
+  <div class="card">
+    <div class="price-row">
+      <div class="what">Заказ песни</div>
+      <div class="sum">1000 ₽</div>            <!-- ЦЕНА -->
     </div>
+    <div class="divider"></div>
+    <div class="pay-title">Перевод по номеру телефона</div>
+    <div class="phone">+7 951 8980698</div>    <!-- НОМЕР (как показывается) -->
+    <div class="bank">Т-Банк</div>              <!-- БАНК -->
+    <button class="btn main" id="copy">Скопировать номер</button>
   </div>
 </section>
 
-<!-- =========================== ЦЕНЫ =========================== -->
-<section id="prices">
-  <div class="wrap">
-    <h2 class="label">Цены</h2>
-    <!-- КАРТОЧКИ ЦЕН: чтобы добавить новую — скопируйте блок <div class="price-card">...</div> -->
-    <div class="price-grid">
-      <div class="price-card main">
-        <div class="what">Заказ одной песни</div>
-        <div class="sum">1000 ₽</div>
-        <div class="note">Любая песня из списка ниже</div>
-      </div>
-      <!-- ПОДДЕРЖАТЬ НАС: номер и банк можно поменять -->
-      <div class="price-card">
-        <div class="what">Поддержать нас</div>
-        <div class="phone">+7 951 8980698</div>
-        <div class="note">Перевод по номеру — Т-Банк</div>
-      </div>
-      <!-- ПРИМЕР ДОПОЛНИТЕЛЬНОЙ ЦЕНЫ (раскомментируйте, если нужно):
-      <div class="price-card">
-        <div class="what">Песня вне списка</div>
-        <div class="sum">2000 ₽</div>
-        <div class="note">Если успеем выучить</div>
-      </div>
-      -->
-    </div>
+<!-- ======================= ПЕСНИ ======================= -->
+<section class="wrap" id="songs">
+  <h2><span class="label">Выберите песню</span></h2>
+
+  <input class="search" id="search" type="search" placeholder="Название или исполнитель" autocomplete="off">
+
+  <div class="field-label">Кто исполняет</div>
+  <div class="seg three" id="who">
+    <button class="active" data-v="all">Все</button>
+    <button data-v="m">Милена</button>
+    <button data-v="d">Давид</button>
   </div>
+
+  <div class="field-label">Сортировка</div>
+  <div class="seg two" id="sort">
+    <button class="active" data-v="artist">По исполнителю</button>
+    <button data-v="title">По названию</button>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div id="list"></div>
 </section>
 
-<!-- ======================== СПИСОК ПЕСЕН ======================== -->
-<section id="songs">
-  <div class="wrap">
-    <h2 class="label">Что мы поём</h2><br>
-    <div class="sub label">Выбирайте песню — сортировка и поиск ниже</div>
+<!-- ===================== КОНТАКТЫ ===================== -->
+<section class="wrap" id="contacts">
+  <h2><span class="label">Контакты</span></h2>
 
-    <div class="controls">
-      <div class="tabs" id="tabs">
-        <button class="active" data-who="all">Все</button>
-        <button data-who="m">Милена</button>
-        <button data-who="d">Давид</button>
-      </div>
-      <input class="search" id="search" type="search" placeholder="Поиск по песне или исполнителю…">
-      <select class="sort" id="sort">
-        <option value="artist">По исполнителю (А→Я)</option>
-        <option value="artist-desc">По исполнителю (Я→А)</option>
-        <option value="title">По названию (А→Я)</option>
-        <option value="title-desc">По названию (Я→А)</option>
-      </select>
-    </div>
-    <div class="count" id="count"></div>
-    <div class="songs" id="list"></div>
-  </div>
-</section>
-
-<!-- ========================= КОНТАКТЫ ========================= -->
-<section id="contacts" class="cta">
-  <div class="wrap">
-    <h2 class="label">Хотите песню?</h2><br>
-    <div class="sub label">Подойдите к нам в баре или напишите в личку</div>
-    <!-- КНОПКИ СВЯЗИ: замените "#" на ссылки на личку -->
-    <div class="btns">
-      <a href="#" class="btn primary" target="_blank">Написать Милене</a>
-      <a href="#" class="btn" target="_blank">Написать Давиду</a>
-      <!-- ОБЩИЙ TELEGRAM ДУЭТА -->
-      <a href="https://t.me/etidvoeee" class="btn" target="_blank">Telegram @etidvoeee</a>
+  <!-- ---------- МИЛЕНА: замените "#" на свои ссылки ---------- -->
+  <div class="card person m">
+    <h3>Милена</h3>
+    <div class="role">Вокал</div>
+    <div class="links">
+      <a class="btn" href="#" target="_blank">Telegram</a>   <!-- https://t.me/username -->
+      <a class="btn" href="#" target="_blank">ВКонтакте</a>  <!-- https://vk.com/username -->
+      <a class="btn" href="#" target="_blank">Instagram</a>  <!-- https://instagram.com/username -->
+      <a class="btn" href="#" target="_blank">Написать</a>   <!-- ссылка на личные сообщения -->
     </div>
   </div>
+
+  <!-- ---------- ДАВИД: замените "#" на свои ссылки ---------- -->
+  <div class="card person d">
+    <h3>Давид</h3>
+    <div class="role">Вокал, гитара</div>
+    <div class="links">
+      <a class="btn" href="#" target="_blank">Telegram</a>
+      <a class="btn" href="#" target="_blank">ВКонтакте</a>
+      <a class="btn" href="#" target="_blank">Instagram</a>
+      <a class="btn" href="#" target="_blank">Написать</a>
+    </div>
+  </div>
+
+  <!-- ---------- ОБЩИЙ TELEGRAM ДУЭТА ---------- -->
+  <a class="btn main" href="https://t.me/etidvoeee" target="_blank">Telegram дуэта @etidvoeee</a>
 </section>
 
 <footer>© Эти двое</footer>
 
 <script>
 /* =================================================================
+   НОМЕР, КОТОРЫЙ КОПИРУЕТ КНОПКА «Скопировать номер»
+   ================================================================= */
+const PHONE = "+79518980698";
+
+/* =================================================================
    СПИСОК ПЕСЕН — РЕДАКТИРУЙТЕ ЗДЕСЬ
    Формат строки:  ["Исполнитель", "Название песни"],
-   Чтобы добавить песню — допишите строку в нужный список.
-   Чтобы удалить — сотрите строку.
-   Если песня есть у обоих — она автоматически покажется с двумя метками.
+   Добавить песню — допишите строку. Удалить — сотрите строку.
+   Если песня есть у обоих — она покажется один раз с двумя именами.
    ================================================================= */
 
 // ---------- ПЕСНИ МИЛЕНЫ ----------
@@ -267,50 +207,50 @@ const DAVID_SONGS = [
 /* =================================================================
    ДАЛЬШЕ — КОД САЙТА. ТРОГАТЬ НЕ НУЖНО.
    ================================================================= */
-const songs = new Map();
-function add(list, who){
-  list.forEach(([artist, title]) => {
-    const key = (artist + "|" + title).toLowerCase();
-    if (!songs.has(key)) songs.set(key, {artist, title, who: new Set()});
-    songs.get(key).who.add(who);
-  });
-}
-add(MILENA_SONGS, "m");
-add(DAVID_SONGS, "d");
-const ALL = [...songs.values()];
-
-let state = {who: "all", q: "", sort: "artist"};
+const map = new Map();
+function add(list, who){ list.forEach(([artist, title]) => {
+  const k = (artist + "|" + title).toLowerCase();
+  if (!map.has(k)) map.set(k, {artist, title, who: new Set()});
+  map.get(k).who.add(who);
+});}
+add(MILENA_SONGS, "m"); add(DAVID_SONGS, "d");
+const ALL = [...map.values()];
+const NAMES = {m: "Милена", d: "Давид"};
+const st = {who: "all", q: "", sort: "artist"};
 const coll = new Intl.Collator("ru", {sensitivity: "base", numeric: true});
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm = s => s.toLowerCase().replace(/ё/g, "е");
+const $ = id => document.getElementById(id);
 
 function render(){
-  const q = state.q.trim().toLowerCase();
-  let rows = ALL.filter(s =>
-    (state.who === "all" || s.who.has(state.who)) &&
-    (!q || (s.artist + " " + s.title).toLowerCase().includes(q))
-  );
-  const [field, dir] = state.sort.split("-");
-  const other = field === "artist" ? "title" : "artist";
-  rows.sort((a, b) => (coll.compare(a[field], b[field]) || coll.compare(a[other], b[other])) * (dir ? -1 : 1));
-
-  document.getElementById("count").textContent = "Песен: " + rows.length;
-  document.getElementById("list").innerHTML = rows.length
-    ? rows.map((s, i) => `
-      <div class="song">
-        <div class="num">${i + 1}</div>
-        <div class="info"><div class="title">${esc(s.title)}</div><div class="artist">${esc(s.artist)}</div></div>
-        <div class="who">${s.who.has("m") ? '<span class="dot m">Милена</span>' : ""}${s.who.has("d") ? '<span class="dot d">Давид</span>' : ""}</div>
-      </div>`).join("")
-    : '<div class="empty">Ничего не нашлось 🙁</div>';
+  const q = norm(st.q.trim());
+  const rows = ALL.filter(s => (st.who === "all" || s.who.has(st.who)) && (!q || norm(s.artist + " " + s.title).includes(q)));
+  const f = st.sort, o = f === "artist" ? "title" : "artist";
+  rows.sort((a, b) => coll.compare(a[f], b[f]) || coll.compare(a[o], b[o]));
+  $("count").textContent = "Найдено песен: " + rows.length;
+  $("list").innerHTML = rows.map(s => `
+    <div class="song">
+      <div><div class="title">${esc(s.title)}</div><div class="artist">${esc(s.artist)}</div></div>
+      <div class="tags">${[...s.who].map(w => `<span class="tag ${w}">${NAMES[w]}</span>`).join("")}</div>
+    </div>`).join("") || '<div class="empty">Ничего не найдено. Проверьте написание или спросите у нас.</div>';
 }
 
-document.getElementById("tabs").addEventListener("click", e => {
-  const b = e.target.closest("button"); if (!b) return;
-  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("active", x === b));
-  state.who = b.dataset.who; render();
+for (const [id, key] of [["who","who"],["sort","sort"]]) {
+  $(id).addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    $(id).querySelectorAll("button").forEach(x => x.classList.toggle("active", x === b));
+    st[key] = b.dataset.v; render();
+  });
+}
+$("search").addEventListener("input", e => { st.q = e.target.value; render(); });
+
+$("copy").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(PHONE); }
+  catch { const t = document.createElement("textarea"); t.value = PHONE; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
+  const b = $("copy"); b.textContent = "Номер скопирован"; b.classList.add("done");
+  setTimeout(() => { b.textContent = "Скопировать номер"; b.classList.remove("done"); }, 2000);
 });
-document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; render(); });
-document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+
 render();
 </script>
 </body>
